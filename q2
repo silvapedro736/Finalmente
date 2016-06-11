@@ -1,14 +1,59 @@
 2222222222222
 
 A.  Explain what recursion is and when it is useful.
-    Explain what the |termination step| and |recursion step| are in a recursive method.
+
+
+    Recursion is when a method calls itself.
+    The termination step is when you break a recursive loop.
+    The Recrsion step is when the method calls itself so it can run again.
+    
 
 B.  Describe the difference between a Queue and a Stack.
 
+
+    In a queue the last object you add will be dealt with last.
+    In a Stack the last object you add will be dealt with first.
+    
 C.  Write a class for an element doublely-linked list.
+    
+    
+public class EDoubleLinked {
+
+    public EDoubleLinked next;
+    
+    public EDoubleLinked prev;
+    
+    public Object z;
+
+
+    public EDoubleLinked(Object z, EDoubleLinked n, EDoubleLinked p){
+    
+        this.z = z;
+        this.next = n;
+        this.prev = p;
+        
+    }
+    
+    public void append(EDoubleLinked l){
+    
+        this.Final().next = l;
+        
+    }
+
+    public EDoubleLinked Final(){
+    
+        EDoubleLinked temp = this;
+        while(temp.next != null){
+        
+            temp = temp.next;
+            
+        }
+        
+        return temp;
+        
+    }
+    
+}
 
 D.  Explain what a Merkle Tree is.  
-    Describe the structure and purpose of a Merkle Tree.
-    What is the Merkle root?
-    What is the function of a certificate in this data structure?
     
